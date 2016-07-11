@@ -1,28 +1,29 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        sort(nums.begin(),nums.ends());
+        //sort(nums.begin(),nums.end());
         //vector<int>::iterator n_iter;
         int a = 0;
         int b = 0;
         int i = 0;
+        int j = 0;
         vector<int> res;
         //for(int i =0;i<nums.size();i++){
         do{
             // if(a+b == target) break;
             a = nums[i];
-            for(int j = i+1;j<nums.size();j++){
-                if(a + nums[j] == target){
-                    b = nums[j];
+            for(j = i+1;j<nums.size();j++){
+                b = nums[j];
+                if(a+b == target){
                     res.push_back(i);
                     res.push_back(j);
                     break;   
-                }else if(a+nums[j] > target){
-                    b = nums[j];
+                }else if(a+b > target){
                     break;
                 }else continue;
             }
             i++;
-        }while(a+b != target && i <nums.size())
-    }
+        }while((a+b != target) && i < nums.size());
+        return res;
+    };
 };
