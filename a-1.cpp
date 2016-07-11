@@ -18,9 +18,7 @@ public:
                     res.push_back(i);
                     res.push_back(j);
                     break;   
-                }else if(a+b > target){
-                    break;
-                }else continue;
+                }
             }
             i++;
         }while((a+b != target) && i < nums.size());
