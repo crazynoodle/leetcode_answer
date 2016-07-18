@@ -59,7 +59,7 @@ public:
             return root;
     }
     
-    TreeNode* lowestCommonAncestor_(TreeNode* root, TreeNode* p, TreeNode* q) {
+    TreeNode* lowestCommonAncestor_1(TreeNode* root, TreeNode* p, TreeNode* q) {
             if(root == NULL)
                 return NULL;
             
@@ -95,21 +95,26 @@ public:
     }
     
     bool getNodePath(stack<TreeNode*>& res,TreeNode* root,TreeNode* target){
+        //特殊情况，当两者有一为空时，返回false;
         if(root == NULL || target == NULL)
             return false;
         
-        bool flag = false;    
+        bool flag = false; 
+        //当前遍历节点等于目标节点，将其push进栈，推出函数，返回true;
         if(root == target){
             res.push(root);
             flag = true;
         }else{
+            //若不等于，深度遍历其左右节点，同时将本节点push进栈；
             res.push(root);
             if(root->left){
+                //递归遍历左节点，若返回ture,说明已找到target;路径寻找完毕，返回true;
                 if(getNodePath(res,root->left,target))
                     flag = true;
-                if(!flag)
+                if(!flag)//若返回false,在当前栈帧删除掉最后一个入栈的节点
                     res.pop();
             }
+            //当在当前左子树找不到target,从右子树种查找；
             if(root->right && !flag){
                 if(getNodePath(res,root->right,target))
                     flag = true;
@@ -117,6 +122,7 @@ public:
                     res.pop();
             }
         }
+            //最终返回flag
             return flag;
     }
     
@@ -165,7 +171,7 @@ public:
     	return IsInclude(pRoot,nFirst,nSec,bIsInFir,bIsInSec);
     }
 
-    TreeNode* lowestCommonAncestor_old(TreeNode* root, TreeNode* p, TreeNode* q) {
+    TreeNode* lowestCommonAncestor_2(TreeNode* root, TreeNode* p, TreeNode* q) {
         // special cases
         if(root == NULL)
             return NULL;
