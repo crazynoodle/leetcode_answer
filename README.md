@@ -6,3 +6,8 @@ This is a copy of my answer in leetcode;I put them here for a backup;
 http://lib.csdn.net/base/31?page=2&type=1#md
 ---
 http://blog.csdn.net/yutianzuijin/article/details/11477603/
+#### webLogic web.site
+---
+http://www.importnew.com/17025.html
+---
+http://www.beansoft.biz/weblogic/docs92/cluster/setup.html#wp742559
