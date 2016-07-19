@@ -16,3 +16,6 @@ http://www.beansoft.biz/weblogic/docs92/cluster/setup.html#wp742559
 queue
 word search
 wildcard matching
+
+##### weblogic + wtc + java + tuxedo
+http://blog.163.com/yuan_peng/blog/static/1260681192009719104714639/
