@@ -11,3 +11,8 @@ http://blog.csdn.net/yutianzuijin/article/details/11477603/
 http://www.importnew.com/17025.html
 ---
 http://www.beansoft.biz/weblogic/docs92/cluster/setup.html#wp742559
+
+##### problem to solve
+queue
+word search
+wildcard matching
