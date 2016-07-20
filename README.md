@@ -19,3 +19,8 @@ wildcard matching
 
 ##### weblogic + wtc + java + tuxedo
 http://blog.163.com/yuan_peng/blog/static/1260681192009719104714639/
+
+##### servlet+ejb
+http://www.cnblogs.com/xdp-gacl/p/3902537.html
+http://www.cppblog.com/xingmuxixi/archive/2010/01/14/105669.html
+
