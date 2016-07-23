@@ -9,11 +9,11 @@
 class queen{
   public:
     queen(const int x):dimension(x){
-      pos.resize(dmension);
+      pos.resize(dmension,0);
     }
     void setDimension(const int x){
       dimension = x;
-      pos.resize(dimension);
+      pos.reverse(dimension);
       return;
     }
     int getDimension(){
@@ -38,7 +38,7 @@ class queen{
         int k = 0;
         while(k++ < index){
           //judge it is suitable or not to place at this postion 
-          if(){
+          if(pos[index]-pos[k] != 1 && pos[index]-pos[k] != -1 && index-k != pos[index]-pos[k]){
             if(k == index){
               search(index+1);
             }
@@ -47,6 +47,7 @@ class queen{
         }
       }
     }
+    
   private:
     vector<vector<int>> res;
     vector<int> pos;
