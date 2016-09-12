@@ -19,7 +19,9 @@ public:
             res[i] %= 10;
         }
         
+        //the zeroflag is used to avoid the front 0 of the result;no other use
         bool zeroflag = false;
+        
         string sum("");        
         if(carry){
             sum.push_back(carry+'0');
