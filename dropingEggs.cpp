@@ -18,7 +18,7 @@
       
     for(int i=2;i<=height;i++){
       for(int j=1;j<=i;j++)
-        f[j]=min(f[j],1+max(j-1,f(i-j)));
+        f[j]=min(f[j],1+max(j-1,f[i-j]));
     }
     
     return f[height];
